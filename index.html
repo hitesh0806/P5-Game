@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Will u be my friend!!</title>
+  </head>
+  <body>
+    <div id="para">
+    <label>Heyy ur name:</label>
+    <input id="nameinp">
+    <button id="next" onclick="next()">Next</button>
+    </div>
+  </body>
+  <script>
+
+function next()
+{
+ let x=document.getElementById('nameinp').value;
+ x=String(x);
+ localStorage.setItem('name',JSON.stringify(x));
+ window.location.href='index2.html';
+}
+  </script>
+</html>

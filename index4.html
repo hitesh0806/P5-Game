@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Will u be my friend!!</title>
+  </head>
+  <body>
+    <div class="para">
+    <h3>Yeahh lesssgooo!!! I knew u would...</h3>
+    <button class="feedback" onclick="feedback()">Feedback pls</button>
+    </div>
+  </body>
+  <script>
+   function feedback()
+   {
+    document.querySelector('.para').innerHTML=`<textarea></textarea><br>
+    <button onclick="submit()">Submit</button>`
+   }
+   function submit()
+   {
+    document.querySelector('.para').innerHTML=`FUCK YOU!!! I don't give a shit to ur feedback, lol.`
+   }
+
+  </script>
+</html>

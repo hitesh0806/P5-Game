@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Will u be my friend!!</title>
+  </head>
+  <body>
+    <div class="para">
+    <h3>Look there's no option for u, I want you to be my friend that's it...What do u say??</h3>
+    <button id="yes" onclick="yes()">Yes</button>
+    <div class="para2">
+    <button id="no" onclick="no()">No</button>
+    </div>
+    </div>
+  </body>
+  <script>
+function yes()
+{
+  window.location.href='index4.html';
+}
+function no()
+{
+ let x=Math.random();
+  if(x>=0&&x<1/8){
+  document.querySelector('.para2').innerHTML=`<button style="position:absolute;top:30%;left:40%" onclick="no()">No</button>`;
+  }
+  if(x>=1/8&&x<2/8){
+  document.querySelector('.para2').innerHTML=`<button style="position:absolute;top:60%;left:50%" onclick="no()">No</button>`;
+  }
+  if(x>=2/8&&x<3/8){
+  document.querySelector('.para2').innerHTML=`<button style="position:absolute;top:20%;left:20%" onclick="no()">No</button>`;
+  }
+  if(x>=3/8&&x<4/8){
+  document.querySelector('.para2').innerHTML=`<button style="position:absolute;top:50%;left:50%" onclick="no()">No</button>`;
+  }
+  if(x>=4/8&&x<5/8){
+  document.querySelector('.para2').innerHTML=`<button style="position:absolute;top:80%;left:70%" onclick="no()">No</button>`;
+  }
+  if(x>=5/8&&x<6/8){
+  document.querySelector('.para2').innerHTML=`<button style="position:absolute;top:60%;left:20%" onclick="no()">No</button>`;
+  }
+  if(x>=6/8&&x<7/8){
+  document.querySelector('.para2').innerHTML=`<button style="position:absolute;top:10%;left:70%" onclick="no()">No</button>`;
+  }
+  if(x>=7/8&&x<1){
+  document.querySelector('.para2').innerHTML=`<button style="position:absolute;top:70%;left:30%" onclick="no()">No</button>`;
+  }
+}
+console.log(x);
+  </script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Will u be my friend!!</title>
+  </head>
+  <body>
+    <div class="para">
+    <h4 class="welcomenote"></h4>
+    <button class="yes" onclick="yes()">Yes</button>
+    <button class="no" onclick="no()">No</button>
+    </div>
+  </body>
+  <script>
+    
+window.onload=function welcomenote()
+{
+    let y;
+    y=JSON.parse(localStorage.getItem('name'))
+    y=String(y);
+    if(y)
+    {
+    document.querySelector(".welcomenote").innerHTML=`Heyy ${y} do u wanna be my friend??`
+    }
+}
+function yes()
+{
+ document.querySelector('.para').innerHTML=`<h3>But I dont't wanna be friends with u though!!</h3><br>
+ <button onclick="next1()"">Next</button>`;
+}
+function next1()
+{
+ document.querySelector('.para').innerHTML=`<h3>Loll, I was just kidding!!</h3><br>
+ <button onclick="next()"">Next</button>`;
+}
+function no()
+{
+ document.querySelector('.para').innerHTML=`<h3>Why don't u wanna be friends with me, think again??</h3>
+ <button onclick="next()"">Next</button>`;
+}
+function next()
+{
+    window.location.href='index3.html';
+}
+  </script>
+</html>
