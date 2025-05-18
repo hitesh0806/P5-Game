@@ -85,13 +85,13 @@ function playgame(playermove)
         losses.textContent="Losses: "+score.loss;
         ties.textContent="Ties: "+score.tie;
         gp.textContent="games played: "+score.gp;
-if(score.wins>=4)
+if(score.wins>=5)
 {
     document.querySelector('.para').innerHTML=`<h3>You've outsmarted the machine. Impressive.</h3><br>
     <button id="buttons1" onclick="cont()">Continue</button>`;
 
 }
-if(score.gp>10)
+if(score.gp>=10)
 {
     document.querySelector('.para').innerHTML=`<h3>You lose, the computer saw that coming a mile away!<br>Better luck next time.</h3>
     <button id="buttons1" onclick="quit()">Continue</button>`;
