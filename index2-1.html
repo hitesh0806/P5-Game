@@ -80,20 +80,20 @@
             <h4>Answer atleat 3 question correctly</h4>
             <ls>
                 <h5>1. Do you laugh at your own jokes?</h5>
-                <button class="yes btn"onclick="correct()">Yes</button>
-                <button class="no btn"onclick="wrong()">No</button><br>
+                <button id="click" class="yes"onclick="correct()">Yes</button>
+                <button id="click" class="no"onclick="wrong()">No</button><br>
                 <h5>2. Do u like pizza?</h5>
-                <button class="yes btn"onclick="wrong()">Yes</button>
-                <button class="no btn"onclick="correct()">No</button><br><br>
+                <button id="click" class="yes"onclick="wrong()">Yes</button>
+                <button id="click" class="no"onclick="correct()">No</button><br><br>
                 <h5>3. Would you let me be the annoying notification you can't turn off?</h5>
-                <button class="yes btn"onclick="correct()">Yes</button>
-                <button class="no btn"onclick="wrong()">No</button><br><br>
+                <button id="click" class="yes"onclick="correct()">Yes</button>
+                <button id="click" class="no"onclick="wrong()">No</button><br><br>
                 <h5>4. If I was kidnapped by aliens, would you still save me if it meant fighting them with a stick?</h5>
-                <button class="yes btn"onclick="correct()">Yes</button>
-                <button class="no btn"onclick="wrong()">No</button><br><br>
+                <button id="click" class="yes"onclick="correct()">Yes</button>
+                <button id="click" class="no"onclick="wrong()">No</button><br><br>
                 <h5>5. Do you promise to never eat the last slice of pizza without asking?</h5>
-                <button class="yes btn"onclick="correct()">Yes</button>
-                <button class="no btn"onclick="wrong()">No</button><br><br>
+                <button id="click" class="yes"onclick="correct()">Yes</button>
+                <button id="click" class="no"onclick="wrong()">No</button><br><br>
             </ls>
             <button class="submit" onclick="submit()">Submit</button>
         </div>
@@ -101,19 +101,26 @@
     <script>
         let correct1=0;
         let wrong1=0;
+        let click=0;
         function correct()
         {
             correct1++;
+            click++;
+            console.log(click);
             
         }
         function wrong()
         {
             wrong1++;
+            click++
+            console.log(click);
             
         }
-       
         function submit()
         {
+        let a=correct1+wrong1;
+        console.log(a);
+        if(click==5){
         if(correct1>=3)
         {
           document.querySelector('.para').innerHTML=`<h3>You've come far, but before you earn my sacred friendship, there's a final challenge...</h3><br>
@@ -125,9 +132,16 @@
           <button class="yes" onclick="quit()">Quit</button>` 
         }
         }
+        else{
+            alert('Answer the fucking questions motherfucker!!!');
+            correct1=0;
+            wrong1=0;
+            click=0;
+        }
+        }
         function cont()
         {
-          window.location.href='index2-3.html';
+          window.location.href='index2-2.html';
         }
         function quit()
         {

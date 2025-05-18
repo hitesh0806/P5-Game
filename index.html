@@ -91,9 +91,14 @@
 function next()
 {
  let x=document.getElementById('nameinp').value;
+ if(x){
  x=String(x);
  localStorage.setItem('name',JSON.stringify(x));
  window.location.href='index2.html';
+ }
+ else{
+  alert('Type something you asshole, Dumbfuck!!!')
+ }
 }
   </script>
 </html>

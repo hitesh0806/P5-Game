@@ -99,6 +99,7 @@
     function submit(button)
     {
      let num =Number(button.value);
+     
      if (num===y)
      {
         document.querySelector('.para2').innerHTML=`<h3>Congrats, you've unlocked your ticket to the final battle!</h3>
@@ -109,6 +110,7 @@
         document.querySelector('.para2').innerHTML=`<h3>Oof, not even close. Game over, my friend...Better luck in your next life</h3>
         <button onclick="quit()">Continue</button>`;
      }
+     
     }
     function cont()
     {
