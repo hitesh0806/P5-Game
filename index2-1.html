@@ -118,8 +118,6 @@
         }
         function submit()
         {
-        let a=correct1+wrong1;
-        console.log(a);
         if(click==5){
         if(correct1>=3)
         {
@@ -132,11 +130,20 @@
           <button class="yes" onclick="quit()">Quit</button>` 
         }
         }
-        else{
-            alert('Answer the fucking questions motherfucker!!!');
+        else if(click>5)
+        {
             correct1=0;
             wrong1=0;
             click=0;
+            alert('Answer only once for each mother fucker!')
+            
+        }
+        else{
+            correct1=0;
+            wrong1=0;
+            click=0;
+            alert('Answer the fucking questions motherfucker!!!');
+           
         }
         }
         function cont()

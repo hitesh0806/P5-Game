@@ -86,13 +86,20 @@
   <script>
    function feedback()
    {
-    document.querySelector('.para').innerHTML=`<textarea></textarea><br>
+    document.querySelector('.para').innerHTML=`<textarea id='textarea'></textarea><br>
     <button onclick="submit()">Submit</button>`
    }
+   
    function submit()
    {
+    let x=document.getElementById('textarea').value;
+    if(x){
     document.querySelector('.para').innerHTML=`FUCK YOU!!! I don't give a shit to ur feedback, lol.`
    }
+   else{
+    alert('Gimme some feedback asshole!!')
+   }
+  }
 
   </script>
 </html>
