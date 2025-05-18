@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ROCK, PAPER, SCISSOR</title>
+     <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .para {
+            margin-top: 30px;
+        }
+
+        #buttons1 button,
+        .para button {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            margin: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #buttons1 button:hover,
+        .para button:hover {
+            background-color: #e68a00;
+        }
+
+        #results1 {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+        }
+
+        #results h3,
+        #results1 h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        #score {
+            font-size: 20px;
+            margin-top: 20px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        #randomnumber {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #bbb;
+        }
+    </style>
+
+    </head>
+<body>
+<div class="para">
+<div id="buttons1">
+    <button id="rock" onclick="playgame('rock')">ROCK</button>
+    <button id="paper" onclick="playgame('paper')">PAPER</button>
+    <button id="scissor" onclick="playgame('scissor')">SCISSOR</button>
+</div>
+</div>
+
+<div id="results1">
+<div id="results">
+    <h3 id="computermove1"></h3><br>
+    <h3 id="result"></h3><br>
+</div>
+    <h3 id="score">Scores</h3><br>
+    <h3 id="wins"></h3><br>
+    <h3 id="losses"></h3><br>
+    <h3 id="ties"></h3><br>
+    <h3 id="gp"></h3><br>
+    <h3 id="note"></h3>
+</div>
+
+    <h3 id="randomnumber"></h3>
+    <script src="java.js"></script>
+</body>    
+</html>
